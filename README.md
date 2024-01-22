@@ -22,5 +22,6 @@ This project is a simple Node.js application that provides web services for grou
 
 3. npm start
 
-4. node .\src\tests\e2eTest.js 
+4. node .\src\tests\e2eTest.js
+    
 Note: Change the testUser credentials after running the test suite for the first time to avoid duplication errors on subsequent runs.
