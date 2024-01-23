@@ -1,0 +1,494 @@
+{
+	"info": {
+		"_postman_id": "736a38a4-e310-4d57-b6aa-8bce6cd0df36",
+		"name": "chatApplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32471704"
+	},
+	"item": [
+		{
+			"name": "Group",
+			"item": [
+				{
+					"name": "createGroup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4NjU2NDMsImV4cCI6MTcwNTg2OTI0M30.CyLo_jRiEYf8r39P-I1WdKhhDKV4NnvT0v864np6EXk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"UX-Group\",\r\n    \"members\":[\"65ad58e055e34da98ab652f4\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/group/createGroup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"group",
+								"createGroup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllGroups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4NjU2NDMsImV4cCI6MTcwNTg2OTI0M30.CyLo_jRiEYf8r39P-I1WdKhhDKV4NnvT0v864np6EXk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/group/groups",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"group",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchGroups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4NjU2NDMsImV4cCI6MTcwNTg2OTI0M30.CyLo_jRiEYf8r39P-I1WdKhhDKV4NnvT0v864np6EXk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/group/searchGroups/UX-Group",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"group",
+								"searchGroups",
+								"UX-Group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteGroup",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4NjU2NDMsImV4cCI6MTcwNTg2OTI0M30.CyLo_jRiEYf8r39P-I1WdKhhDKV4NnvT0v864np6EXk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/group/deleteGroup?groupId=65ad726dacf74a8dc9cd2469",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"group",
+								"deleteGroup"
+							],
+							"query": [
+								{
+									"key": "A",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4NjU2NDMsImV4cCI6MTcwNTg2OTI0M30.CyLo_jRiEYf8r39P-I1WdKhhDKV4NnvT0v864np6EXk",
+									"disabled": true
+								},
+								{
+									"key": "groupId",
+									"value": "65ad726dacf74a8dc9cd2469"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMembers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4Njc0ODYsImV4cCI6MTcwNTg3MTA4Nn0.7PP1TvQARQ4doFdnxTXghsGraUZ_9bWoyaaKlBbcJCc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groupId\":\"65ad78589faf574641a47308\",\r\n    \"members\":[\"65ad7804e8badcec41995702\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/group/addMembers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"group",
+								"addMembers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "createMessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4OTkxOTUsImV4cCI6MTcwNTkwMjc5NX0.xLh79U6jrhTCASDtuZPjJ9WbM-szyDplM8S0Og4X69M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Test second message\",\r\n    \"senderId\":\"65ad37a9baa2fa2c8faac09a\",\r\n    \"groupId\":\"65ad78589faf574641a47308\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/messages/createMessage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messages",
+								"createMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "likeMessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4OTkxOTUsImV4cCI6MTcwNTkwMjc5NX0.xLh79U6jrhTCASDtuZPjJ9WbM-szyDplM8S0Og4X69M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"messageId\":\"65adf4ce3ac3fd3ef17aef43\",\r\n    \"userId\":\"65ad7804e8badcec41995702\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/messages/likeMessage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messages",
+								"likeMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMessagesByGroup",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFlMDgzODNlMzE1ZjBiYjE3Y2EyZDciLCJpYXQiOjE3MDU5MDQxODQsImV4cCI6MTcwNTkwNzc4NH0.lezHVrUaqSqCzKyx3cQF-DaAL6x7MMdOC3EKVx-ZAFo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/messages/getMessagesByGroup/65ad78589faf574641a47308",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messages",
+								"getMessagesByGroup",
+								"65ad78589faf574641a47308"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMessage-One-To-One",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4OTkxOTUsImV4cCI6MTcwNTkwMjc5NX0.xLh79U6jrhTCASDtuZPjJ9WbM-szyDplM8S0Og4X69M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"Test first one to one message\",\r\n    \"senderId\":\"65ad58e055e34da98ab652f4\",\r\n    \"receiverId\":\"65ad7804e8badcec41995702\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/messages/createMessage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messages",
+								"createMessage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4NTUyNzIsImV4cCI6MTcwNTg1ODg3Mn0.q93NMsCzxIRxKd23W75Cf487rgECZH-u2tw0I7rzqyQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4NTUyNzIsImV4cCI6MTcwNTg1ODg3Mn0.q93NMsCzxIRxKd23W75Cf487rgECZH-u2tw0I7rzqyQ",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"Helloworld\",\r\n    \"email\": \"abc@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"RAHUL\",\r\n    \"password\":\"rahul\",\r\n    \"email\": \"rahul@gmail.com\",\r\n    \"roles\": [\"user\"]  //Value can be [\"admin\"] or [\"user\"] or both\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin-createUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4NTkyNzQsImV4cCI6MTcwNTg2Mjg3NH0.urh5gR4NX5bZteh9L6tzGKtSzUPMUVI7JJoepoNwbkQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"KATARIA\",\r\n    \"password\":\"WORLD\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"roles\": [\"user\"]  //Value can be [\"admin\"] or [\"user\"] or both\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/createUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin-editUser",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkMzdhOWJhYTJmYTJjOGZhYWMwOWEiLCJpYXQiOjE3MDU4OTkxOTUsImV4cCI6MTcwNTkwMjc5NX0.xLh79U6jrhTCASDtuZPjJ9WbM-szyDplM8S0Og4X69M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"KATARIA-12\",\r\n    \"password\":\"WORLD\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"roles\": [\"user\",\"admin\"] //Value can be [\"admin\"] or [\"user\"] or both\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/editUser?userId=65ad58e055e34da98ab652f4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"editUser"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "65ad58e055e34da98ab652f4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
